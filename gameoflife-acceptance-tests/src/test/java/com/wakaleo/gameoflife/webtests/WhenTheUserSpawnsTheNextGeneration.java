@@ -36,46 +36,38 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void anEmptyGridShouldProduceAnEmptyGrid() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.starts_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
 
     }
 
     @Test
     public void aGridWithOneCellShouldProduceAnEmptyGrid() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.clicks_on_cell_at(1, 1);
         player.starts_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
     }
 
     @Test
     public void aGridWithTwoCellsShouldProduceAnEmptyGrid() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.clicks_on_cell_at(1, 1);
         player.clicks_on_cell_at(0, 1);
         player.starts_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
     }
 
 
     @Test
     public void aStableCellSetShouldProduceTheSameSetOfCells() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.clicks_on_cell_at(0, 0);
@@ -84,13 +76,11 @@ public class WhenTheUserSpawnsTheNextGeneration {
         player.clicks_on_cell_at(1, 1);
         player.starts_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
     }
 
     @Test
     public void aRotatingCellSetShouldProduceTheExpectedNewSetOfCells() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.clicks_on_cell_at(0, 0);
@@ -102,13 +92,11 @@ public class WhenTheUserSpawnsTheNextGeneration {
         player.continues_simulation();
         player.continues_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
     }
 
     @Test
     public void aRotatingCellSetShouldProduceTheOriginalSetOfCellsAfterTwoGenerations() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.clicks_on_cell_at(1, 0);
@@ -117,13 +105,11 @@ public class WhenTheUserSpawnsTheNextGeneration {
         player.starts_simulation();
         player.continues_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
     }
 
     @Test
     public void aRotatingCellSetShouldProduceTheOriginalSetOfCellsAfterThreeGenerations() {
-        String[][] expectedGrid = EMPTY_GRID;
-
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
         player.clicks_on_cell_at(1, 0);
@@ -133,7 +119,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
         player.continues_simulation();
         player.continues_simulation();
         player.continues_simulation();
-        player.should_see_grid(expectedGrid);
+        player.should_see_grid(EMPTY_GRID);
     }
 
 }
