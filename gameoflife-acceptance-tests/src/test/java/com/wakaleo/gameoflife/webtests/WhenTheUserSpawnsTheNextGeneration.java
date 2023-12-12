@@ -36,9 +36,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void anEmptyGridShouldProduceAnEmptyGrid() {
-        String[][] expectedGrid = new String[][]{{".", ".", "."},
-                {".", ".", "."},
-                {".", ".", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
@@ -50,9 +48,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void aGridWithOneCellShouldProduceAnEmptyGrid() {
-        String[][] expectedGrid = new String[][]{{".", ".", "."},
-                {".", ".", "."},
-                {".", ".", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
@@ -64,9 +60,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void aGridWithTwoCellsShouldProduceAnEmptyGrid() {
-        String[][] expectedGrid = new String[][]{{".", ".", "."},
-                {".", ".", "."},
-                {".", ".", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
@@ -80,9 +74,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void aStableCellSetShouldProduceTheSameSetOfCells() {
-        String[][] expectedGrid = new String[][]{{"*", "*", "."},
-                {"*", "*", "."},
-                {".", ".", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
@@ -97,9 +89,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void aRotatingCellSetShouldProduceTheExpectedNewSetOfCells() {
-        String[][] expectedGrid = new String[][]{{".", ".", "."},
-                {".", "*", "."},
-                {".", "*", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
@@ -117,9 +107,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void aRotatingCellSetShouldProduceTheOriginalSetOfCellsAfterTwoGenerations() {
-        String[][] expectedGrid = new String[][]{{".", ".", "."},
-                {"*", "*", "*"},
-                {".", ".", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
@@ -134,9 +122,7 @@ public class WhenTheUserSpawnsTheNextGeneration {
 
     @Test
     public void aRotatingCellSetShouldProduceTheOriginalSetOfCellsAfterThreeGenerations() {
-        String[][] expectedGrid = new String[][]{{".", "*", "."},
-                {".", "*", "."},
-                {".", "*", "."}};
+        String[][] expectedGrid = EMPTY_GRID;
 
         player.opens_home_page();
         player.chooses_to_start_a_new_game();
